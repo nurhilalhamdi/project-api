@@ -79,4 +79,10 @@ class UsersController extends Controller
             "error" => "NIM or password is wrong"
         ]);
     }
+
+    function doLogout()
+    {
+        Auth::logout();
+        return redirect("/login");
+    }
 }

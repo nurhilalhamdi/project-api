@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +17,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'home']);
+
 
 Route::controller(UsersController::class)->group(function () {
     Route::get('/login', 'login');
     Route::post('/login', 'doLogin');
-    Route::post('/logout', 'doLogout');
+    Route::delete('/logout', 'doLogout');
 });
 
 Route::controller(UsersController::class)->group(function () {
     Route::get('/signup', 'signUp');
     Route::post('/signup', 'doSignUp');
+});
+
+Route::controller(DashboardController::class)->group(function () {
+    Route::get('/dashboard', 'dashboard');
 });

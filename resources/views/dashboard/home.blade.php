@@ -31,7 +31,6 @@
             </ul>
             <form method="post" action="/logout">
                 @csrf
-                @method('DELETE')
                 <button class="btn btn-danger" type="submit">Sign Out</button>
             </form>
         </div>

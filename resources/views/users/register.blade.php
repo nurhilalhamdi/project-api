@@ -23,9 +23,6 @@
         </div>
         @endif
 
-
-
-
         <div class="align-items-center g-lg-5 py-5">
             <div class="col-md-10 mx-auto col-lg-5">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Sign Up</h1>
@@ -38,7 +35,7 @@
                         <label for="nama">Nama</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input name="nim" type="text" class="form-control" id="nim" placeholder="id">
+                        <input name="nim" type="number" class="form-control" id="nim" placeholder="id">
                         <label for="nim">NIM</label>
                     </div>
                     <div class="form-floating mb-3">
@@ -48,7 +45,7 @@
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign Up</button>
                     <div class="py-2">
                         <Span>Sudah punya akun? </Span><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/login">
-                            Login sekarang!
+                            Login sekarang
                         </a>
                     </div>
                 </form>

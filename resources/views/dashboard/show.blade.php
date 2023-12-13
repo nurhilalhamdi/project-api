@@ -50,7 +50,7 @@
                             <label for="nama">Nama</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input name="nim" type="text" class="form-control" id="nim" placeholder="id" value="{{$data->nim}}" disabled>
+                            <input name="nim" type="number" class="form-control" id="nim" placeholder="id" value="{{$data->nim}}" disabled>
                             <label for="nim">NIM</label>
                         </div>
 

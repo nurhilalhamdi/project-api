@@ -20,8 +20,6 @@ class UsersController extends Controller
 
     function doSignUp(Request $request)
     {
-
-
         $user = new User();
         $nama = $request->input('nama');
         $nim = $request->input('nim');
@@ -58,7 +56,6 @@ class UsersController extends Controller
         $nim = $request->input('nim');
         $password = $request->input('password');
 
-        //validate input
         if (empty($nim) || empty($password)) {
             return response()->view("users.login", [
                 "title" => "Login",
@@ -87,7 +84,6 @@ class UsersController extends Controller
         return redirect("/login");
     }
 
-
     function detailUser(string $id)
     {
         $detailUser = User::findOrFail($id);
@@ -112,8 +108,6 @@ class UsersController extends Controller
                 "error" => "NIM or nama is required"
             ]);
         }
-
-
 
         $detailUser->update($request->all());
 

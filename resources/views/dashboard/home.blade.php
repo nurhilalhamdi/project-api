@@ -35,7 +35,7 @@
     <div class="container text-center">
         <div class="row justify-content-md-center">
             <div class="col-sm-8 py-5">
-                <h1 class="display-4 fw-bold lh-1 mb-3">Search Student</h1>
+                <h1 class="display-5 fw-bold  mb-3">Search Student</h1>
                 <input class="form-control me-2" id="searchInput" type="search" placeholder="Search Name, NIM, or Join Date" aria-label="Search">
             </div>
             <div class="resultsContainer" id="resultsContainer"></div>

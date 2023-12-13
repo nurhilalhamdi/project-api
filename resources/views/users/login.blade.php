@@ -24,7 +24,7 @@
                 <form class="p-4 p-md-5 border rounded-3 bg-light" method="post" action="/login">
                     @csrf
                     <div class="form-floating mb-3">
-                        <input name="nim" type="text" class="form-control" id="nim" placeholder="id">
+                        <input name="nim" type="number" class="form-control" id="nim" placeholder="id">
                         <label for="nim">NIM</label>
                     </div>
                     <div class="form-floating mb-3">
@@ -35,7 +35,7 @@
 
                     <div class="py-2">
                         <Span>Belum punya akun? </Span><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover" href="/signup">
-                            Daftar sekarang!
+                            Daftar sekarang
                         </a>
                     </div>
                 </form>

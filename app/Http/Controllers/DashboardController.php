@@ -13,6 +13,7 @@ class DashboardController extends Controller
         return response()->view("dashboard.home", [
             "title" => "Dashboard",
             "nama" => Auth::user()->nama,
+            "id" => Auth::user()->id,
         ]);
     }
 }

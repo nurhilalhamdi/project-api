@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use PhpParser\Node\Expr\Cast\String_;
 
 class UsersController extends Controller
 {
@@ -84,5 +85,38 @@ class UsersController extends Controller
     {
         Auth::logout();
         return redirect("/login");
+    }
+
+
+    function detailUser(string $id)
+    {
+        $detailUser = User::findOrFail($id);
+
+        return response()->view('dashboard.show', [
+            "title" => "Profile",
+            "data" => $detailUser
+        ]);
+    }
+
+    function doUpdate(Request $request, string $id)
+    {
+
+        $nim = $request->input('nim');
+        $nama = $request->input('nama');
+        $detailUser = User::findOrFail($id);
+        //validate input
+        if (empty($nim) || empty($nama)) {
+            return response()->view('dashboard.show', [
+                "title" => "Profile",
+                "data" => $detailUser,
+                "error" => "NIM or nama is required"
+            ]);
+        }
+
+
+
+        $detailUser->update($request->all());
+
+        return redirect("/");
     }
 }

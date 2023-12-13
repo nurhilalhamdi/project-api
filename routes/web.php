@@ -35,4 +35,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/logout', [UsersController::class, 'doLogout'])->name('logout');
     Route::get('/dashboard/profile/{id}', [UsersController::class, 'detailUser'])->name('profile');
     Route::post('/dashboard/profile/{id}/update', [UsersController::class, 'doUpdate'])->name('update');
+    Route::get('/live-search', [DashboardController::class, 'liveSearch']);
 });

@@ -63,7 +63,6 @@
 </body>
 
 <script>
-    // JavaScript to enable/disable form fields based on checkbox state
     document.getElementById('flexCheckDefault').addEventListener('change', function() {
         var namaField = document.getElementById('nama');
         var nimField = document.getElementById('nim');
